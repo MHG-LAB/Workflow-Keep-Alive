@@ -17,12 +17,11 @@ jobs:
         BOT_EMAIL: ${{ secrets.BOT_EMAIL }}
       run: |
         mkdir -p ~/.ssh/
-        echo "$Bot_DEPLOY_KEY" > ~/.ssh/id_rsa 
+        echo "$BOT_DEPLOY_KEY" > ~/.ssh/id_rsa 
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
         git config --global user.email "$BOT_EMAIL"
         git config --global user.name "$BOT_NAME"
-        ssh -T git@github.com
     - name: Setup Python 3.7
       uses: actions/setup-python@v2
       with:
