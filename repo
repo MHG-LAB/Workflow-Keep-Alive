@@ -10,3 +10,4 @@ warp-plus
 auto-edn
 RSSBOX
 Cloudflare-WAF-to-AbuseIPDB
+AbuseIPDB-to-Cloudflare-WAF
